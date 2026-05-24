@@ -1,0 +1,155 @@
+.roster-surface {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.roster-surface__header {
+  display: grid;
+  gap: 8px;
+}
+
+.roster-surface__header h2,
+.roster-surface__section h3,
+.active-slot-card h4,
+.roster-card h4 {
+  margin: 0;
+}
+
+.roster-surface__actions,
+.roster-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.roster-card__name-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.roster-card__name-row h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.roster-card__icon-button {
+  padding: 0;
+  border: 1px solid rgba(79, 104, 62, 0.18);
+  cursor: pointer;
+}
+
+.roster-card__icon-button:hover,
+.roster-card__icon-button:focus-visible {
+  outline: 2px solid rgba(97, 128, 78, 0.42);
+  outline-offset: 3px;
+}
+
+.active-slot-grid,
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.active-slot-card,
+.roster-card,
+.pending-list {
+  border: 1px solid rgba(58, 80, 53, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 252, 242, 0.9);
+  box-shadow: 0 12px 34px rgba(53, 74, 48, 0.1);
+}
+
+.active-slot-card,
+.roster-card {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  padding: 14px;
+}
+
+.active-slot-card select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(55, 76, 53, 0.22);
+  border-radius: 12px;
+  padding: 10px 11px;
+  background: #fffef8;
+}
+
+.active-slot-card__meta,
+.roster-card__meta,
+.pending-list {
+  color: #53664c;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.roster-card__asset {
+  overflow-wrap: anywhere;
+}
+
+.roster-card__asset-status {
+  justify-self: start;
+  max-width: 100%;
+  padding: 5px 9px;
+  border: 1px solid rgba(74, 102, 56, 0.16);
+  border-radius: 999px;
+  color: #38537a;
+  background: rgba(116, 155, 210, 0.18);
+  font-size: 0.8rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.roster-card__asset-status--ready {
+  color: #285a2e;
+  background: rgba(115, 169, 91, 0.18);
+}
+
+.roster-card__asset-status--reviewing {
+  color: #73572f;
+  background: rgba(224, 176, 89, 0.2);
+}
+
+.roster-card__asset-status--fallback {
+  color: #38537a;
+  background: rgba(116, 155, 210, 0.18);
+}
+
+.roster-card__asset-status--missing {
+  color: #65715d;
+  background: rgba(111, 126, 102, 0.14);
+}
+
+.pending-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+}
+
+.pending-list span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(103, 135, 86, 0.14);
+  font-weight: 800;
+}
+
+@media (max-width: 820px) {
+  .active-slot-grid,
+  .roster-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 390px) {
+  .roster-card__actions .ui-button,
+  .roster-surface__actions .ui-button {
+    flex: 1 1 130px;
+  }
+}
