@@ -18,17 +18,21 @@
     "sidekick:watch": "node tools/sidekick/job-watcher.mjs",
     "sidekick:event-image": "node tools/sidekick/event-image-request.mjs",
     "security:git-boundary": "node tools/security/check-git-boundary.mjs --base origin/main",
-    "security:pr-text": "node tools/security/check-pr-text-boundary.mjs"
+    "security:pr-text": "node tools/security/check-pr-text-boundary.mjs",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
   },
   "dependencies": {
     "react": "latest",
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.39.0",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@vitejs/plugin-react": "latest",
     "typescript": "latest",
-    "vite": "latest"
+    "vite": "latest",
+    "wrangler": "^4.95.0"
   }
 }

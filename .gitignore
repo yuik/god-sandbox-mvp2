@@ -37,3 +37,10 @@ public/art/**/_tmp/
 public/art/**/_rejected/
 public/art/**/user-uploads/
 public/art/**/_user-uploads/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
